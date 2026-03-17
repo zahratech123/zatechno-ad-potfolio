@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zahratech123.github.io/zatech-ad-portfolio/sitemap.xml
