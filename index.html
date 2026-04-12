@@ -257,157 +257,117 @@
       font-weight:600;
     }
 
-   /* HERO SECTION */
-.hero {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 70px 0;
-  background:
-    radial-gradient(circle at top right, rgba(0,255,229,0.08), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(255,79,216,0.08), transparent 30%);
-}
+/* Hero */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:70px 0;
+      background:
+        radial-gradient(circle at top right, rgba(0,255,229,0.08), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255,79,216,0.08), transparent 30%);
+    }
 
-/* GRID LAYOUT */
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
 
-/* TEXT CONTENT */
-.hero-tag {
-  color: var(--primary);
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
+    .hero-tag{
+      color:var(--primary);
+      font-weight:600;
+      margin-bottom:12px;
+      letter-spacing:1px;
+    }
 
-.hero h1 {
-  font-size: 58px;
-  line-height: 1.1;
-  margin-bottom: 15px;
-}
+    .hero h1{
+      font-size:58px;
+      line-height:1.1;
+      margin-bottom:15px;
+    }
 
-.hero h1 span {
-  color: var(--primary);
-  text-shadow: 0 0 10px var(--primary);
-}
+    .hero h1 span{ color:var(--primary); }
 
-.hero h2 {
-  font-size: 24px;
-  color: var(--muted);
-  margin-bottom: 20px;
-  min-height: 40px;
-}
+    .hero h2{
+      font-size:24px;
+      color:var(--muted);
+      margin-bottom:20px;
+      min-height:40px;
+    }
 
-.hero p {
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.9;
-  margin-bottom: 28px;
-  max-width: 620px;
-}
+    .hero p{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.9;
+      margin-bottom:28px;
+      max-width:620px;
+    }
 
-/* BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
+    .hero-buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-bottom:30px;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 13px 22px;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
+    .btn{
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+      border:2px solid transparent;
+    }
 
-.btn-primary {
-  background: var(--primary);
-  color: #000;
-}
+    .btn-primary{
+      background:var(--primary);
+      color:#000;
+    }
 
-.btn-primary:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 25px var(--shadow);
-}
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px var(--shadow);
+    }
 
-.btn-secondary {
-  border-color: var(--secondary);
-  color: var(--secondary);
-}
+    .btn-secondary{
+      border-color:var(--secondary);
+      color:var(--secondary);
+    }
 
-.btn-secondary:hover {
-  background: var(--secondary);
-  color: #000;
-  transform: translateY(-3px);
-}
+    .btn-secondary:hover{
+      background:var(--secondary);
+      color:#000;
+      transform:translateY(-3px);
+    }
 
-/* PROFILE IMAGE */
-.hero-image {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
+    .hero-image{
+      text-align:center;
+      position:relative;
+    }
 
-.hero-image img {
-  width: 100%;
-  max-width: 220px; /* Perfect laptop size */
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #4CAF50;
-  box-shadow: 0 0 25px var(--shadow);
-  transition: 0.3s ease;
-}
+    .hero-image img{
+      width:100%;
+      max-width:360px;
+      border-radius:28px;
+      border:3px solid rgba(0,255,229,0.25);
+      box-shadow:0 0 40px var(--shadow);
+      object-fit:cover;
+    }
 
-.hero-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 50px rgba(0,0,0,0.4);
-}
-
-/* FLOATING BADGE */
-.badge-floating {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  padding: 12px 14px;
-  border-radius: 14px;
-  font-size: 13px;
-  color: var(--primary);
-  font-weight: 600;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero-image img {
-    max-width: 150px; /* Perfect mobile size */
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-}
+    .badge-floating{
+      position:absolute;
+      bottom:10px;
+      left:20px;
+      background:var(--bg2);
+      border:1px solid var(--border);
+      padding:12px 14px;
+      border-radius:14px;
+      font-size:13px;
+      color:var(--primary);
+      font-weight:600;
+    }
 
 
     /* Stats */
@@ -999,14 +959,13 @@
       <div data-aos="fade-right">
         <div class="hero-tag">HELLO, I'M</div>
         <h1>Zahra <span>Zaranwala</span></h1>
+         <div class="hero-image" data-aos="fade-left">
+        <img src="profile.jpg" alt="Zahra Zaranwala Portfolio Photo">
+        <div class="badge-floating">✨ Emerging AI & Automation Enthusiast</div>
+      </div>
     <p>AI Product Engineer | ECE Student | Future Innovator</p>
   </div>
-
-  <div class="hero-image">
-    <img src="profile.jpg" alt="Zahra Zaranwala">
-  </div>
-</div>
-        <h2><span id="typed"></span></h2>
+  <h2><span id="typed"></span></h2>
         <p>
           I’m an Electronics & Communication Engineering student passionate about
           Artificial Intelligence, Embedded Systems, Automation, Signal Processing,
